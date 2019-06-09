@@ -32,7 +32,7 @@ func main() {
 
 	for i := 0; i < 8; i++ {
 		newPlayer := player.NewPlayer(strconv.Itoa(i))
-		newPlayer.SetDefenceSize(i)
+		newPlayer.SetDefenceSize(i + 1)
 		go newPlayer.RegisterChampionship(registerationChannel)
 	}
 	results := <-resultsChannel
